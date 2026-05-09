@@ -8,7 +8,6 @@
  * Replace placeholder images in src/assets/ with your own.
  */
 
-
 export const site = {
   url: 'https://example.com',
   meta: {

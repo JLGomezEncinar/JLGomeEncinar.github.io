@@ -4,7 +4,7 @@ import SiteIntro from './SiteIntro.astro';
 ---
 
 <aside class="relative hidden shrink-0 lg:block lg:w-[42%]">
-  <div class="sticky top-0 flex h-screen max-h-screen flex-col justify-between items-center overflow-y-auto pt-22 px-12 text-center">
+  <div class="reveal-content sticky top-0 flex h-screen max-h-screen flex-col justify-between items-center overflow-y-auto pt-22 px-12 text-center">
     <div class="space-y-12">
       <SiteIntro variant="sidebar" />
 
@@ -24,3 +24,18 @@ import SiteIntro from './SiteIntro.astro';
     </div>
   </div>
 </aside>
+
+<style is:global>
+  .reveal-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  @keyframes revealIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
