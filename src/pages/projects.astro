@@ -23,46 +23,44 @@ const homeHref = base;
     </a>
   </p>
 
-  <div class="max-w-4xl">
-    <h1 class="mb-8 text-4xl font-bold tracking-tight text-white sm:text-4xl">{site.projectArchivePage.title}</h1>
+  <h1 class="mb-8 text-4xl font-bold tracking-tight text-white sm:text-4xl">{site.projectArchivePage.title}</h1>
 
-    <p class="mb-10 max-w-prose body-copy">
-      {site.projectArchivePage.intro}
-    </p>
+  <p class="mb-10 max-w-prose body-copy">
+    {site.projectArchivePage.intro}
+  </p>
 
-    <div class="overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="min-w-full border-spacing-0 text-left text-sm">
-          <thead class="text-slate">
-            <tr>
-              <th scope="col" class="whitespace-nowrap px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
-                Year
-              </th>
-              <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
-                Project
-              </th>
-              <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
-                Role
-              </th>
-              <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
-                Tech stack
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              site.projectArchive.map((row) => (
-                <tr>
-                  <td class="whitespace-nowrap px-4 py-4 font-mono text-slate">{row.date}</td>
-                  <td class="px-4 py-4 text-slate">{row.project}</td>
-                  <td class="px-4 py-4 text-slate">{row.role}</td>
-                  <td class="px-4 py-4 text-accent">{row.techStack}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
+  <div class="overflow-hidden">
+    <div class="overflow-x-auto">
+      <table class="w-full table-fixed border-spacing-0 text-left text-sm">
+        <thead class="text-slate">
+          <tr>
+            <th scope="col" class="whitespace-nowrap px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
+              Year
+            </th>
+            <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
+              Project
+            </th>
+            <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
+              Role
+            </th>
+            <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em]">
+              Tech stack
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            site.projectArchive.map((row) => (
+              <tr>
+                <td class="whitespace-nowrap px-4 py-4 font-mono text-slate">{row.date}</td>
+                <td class="px-4 py-4 text-slate">{row.project}</td>
+                <td class="px-4 py-4 text-slate">{row.role}</td>
+                <td class="px-4 py-4 text-accent">{row.techStack}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
     </div>
   </div>
 </ArchiveLayout>
